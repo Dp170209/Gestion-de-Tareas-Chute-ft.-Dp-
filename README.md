@@ -11,14 +11,14 @@ La applicacion debe ser implementada utilizando un lenguaje de programación de 
 Se debe usar Programación Orientada a Objetos o Programación Modular o ambos.
 
 **Planificación**
-1. Planificación y diseño (16/02/2024) -> Dp y chute
-2. Configuración del repositorio Git (16/02/2024) -> Dp y Chute
-3. Creación de Ramas (18/02/2024) -> Chute
-4. Desarrollo de funcionalidades (18/02/2024 - 20/02/2024) -> Dp y Chute
-5. Revisión de código (20/02/2024) -> Dp y Chute
-6. Pruebas y Depuración (20/02/2024) -> Dp y Chute
+1. Planificación y diseño (16/02/2024) -> Dp y MrBl4ck
+2. Configuración del repositorio Git (16/02/2024) -> Dp y MrBl4ck
+3. Creación de Ramas (18/02/2024) -> MrBl4ck
+4. Desarrollo de funcionalidades (18/02/2024 - 20/02/2024) -> Dp y MrBl4ck
+5. Revisión de código (20/02/2024) -> Dp y MrBl4ck
+6. Pruebas y Depuración (20/02/2024) -> Dp y MrBl4ck
 7. Documentación y Comentarios (21/02/2024) -> Dp
-8. Finalización y Revisión (23/02/2024) -> Dp y Chute
+8. Finalización y Revisión (23/02/2024) -> Dp y MrBl4ck
 
 **Diseño**
 El diseño es simple con una salida por consola que dispondra de un menú de opciones que cumplirá con sus reséctivas funciones.
@@ -30,23 +30,24 @@ El diseño es simple con una salida por consola que dispondra de un menú de opc
 - Rama de correción de errores: Rama donde se corregirán los posibles errores.
 
 **Funciones**
-_Agregar tareas_:
+
+**_Agregar tareas:_**
   - Solicitar al usuario que ingrese el nombre de la tarea.
   - Agregar la tarea a una lista en memoria.
 
-_Marcar tareas como completadas:_
+**_Marcar tareas como completadas:_**
   - Mostrar la lista de tareas y permitir al usuario seleccionar una tarea por su número.
   - Cambiar el estado de la tarea seleccionada a "completada".
 
-_Eliminar tareas:_
+**_Eliminar tareas:_**
   - Mostrar la lista de tareas y permitir al usuario seleccionar una tarea por su número.
   - Eliminar la tarea seleccionada de la lista.
 
-_Visualización de tareas:_
+**_Visualización de tareas:_**
   - Mostrar todas las tareas en la lista, indicando su número, nombre y estado (completada o no).
 
-_Filtrar tareas por estado:_
+**_Filtrar tareas por estado:_**
   - Permitir al usuario elegir entre ver todas las tareas, las tareas completadas o las tareas pendientes, mostrando solo las que correspondan al estado seleccionado.
 
-_Generación de reportes:_
+**_Generación de reportes:_**
   - Contar el número de tareas completadas y pendientes, mostrando estos totales al usuario.
