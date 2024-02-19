@@ -20,19 +20,7 @@ def mostrar_menu():
 
 def opcion_uno():
     limpiar_pantalla()
-    nombre_tarea = input("Ingrese el nombre de la nueva tarea: ")
-    descripcion_tarea = input("Ingrese la descripción de la nueva tarea: ")
-    fecha_limite = input("Ingrese la fecha límite (YYYY-MM-DD) de la nueva tarea: ")
-    hora_limite = input("Ingrese la hora límite (HH:MM) de la nueva tarea: ")
-    tarea = {
-        "nombre": nombre_tarea,
-        "descripcion": descripcion_tarea,
-        "fecha_limite": fecha_limite,
-        "hora_limite": hora_limite,
-        "completa": False  # Inicialmente la tarea está incompleta
-    }
-    tareas.append(tarea)
-    print("[+] ¡Tarea agregada correctamente!")
+    Agregar.agregar_tarea(tareas)
 
 def opcion_dos():
     limpiar_pantalla()
