@@ -2,7 +2,7 @@ class ListaDeTareas:
     def __init__(self):
         self.tareas = []
 
-    def agregar_tarea(self, tarea):
+    def agregar_tarea(self, tarea): #funcion agregar tareas d:
         self.tareas.append(tarea)
 
     def eliminar_tarea(self, indice_tarea):
@@ -15,3 +15,4 @@ class ListaDeTareas:
     def __str__(self):
         lista_de_tareas_str = "\n".join([f"{i + 1}. {tarea}" for i, tarea in enumerate(self.tareas)])
         return lista_de_tareas_str
+    
