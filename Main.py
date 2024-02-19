@@ -1,14 +1,10 @@
-#!/usr/bin/python3
 import os
-import sys, signal, requests
-import pyfiglet
-
-def def_handler(sig, frame):
-    print("\n\n[!] Saliendo...\n")
-    sys.exit(1)
+import sys, signal, pyfiglet
 
 # Ctrl + C
-signal.signal(signal.SIGINT, def_handler)
+signal.signal(signal.SIGINT, lambda sig, frame: sys.exit(1))
+
+tareas = []  # Lista para almacenar las tareas
 
 def limpiar_pantalla():
     os.system('cls')
@@ -24,11 +20,38 @@ def mostrar_menu():
 
 def opcion_uno():
     limpiar_pantalla()
-    print("Aqui agregaras una nueva tarea.")
+    nombre_tarea = input("Ingrese el nombre de la nueva tarea: ")
+    descripcion_tarea = input("Ingrese la descripción de la nueva tarea: ")
+    fecha_limite = input("Ingrese la fecha límite (YYYY-MM-DD) de la nueva tarea: ")
+    hora_limite = input("Ingrese la hora límite (HH:MM) de la nueva tarea: ")
+    tarea = {
+        "nombre": nombre_tarea,
+        "descripcion": descripcion_tarea,
+        "fecha_limite": fecha_limite,
+        "hora_limite": hora_limite,
+        "completa": False  # Inicialmente la tarea está incompleta
+    }
+    tareas.append(tarea)
+    print("¡Tarea agregada correctamente!")
 
 def opcion_dos():
     limpiar_pantalla()
-    print("Marca las tareas que quieras como completadas.")
+    print("Tareas:")
+    if not tareas:
+        print("No hay tareas registradas.")
+    else:
+        for i, tarea in enumerate(tareas, start=1):
+            print(f"Tarea {i}: {tarea['nombre']} - Estado: {'completa' if tarea['completa'] else 'incompleta'}")
+        opcion = input("Ingrese el número de la tarea que desea marcar como completa: ")
+        try:
+            opcion = int(opcion)
+            if 1 <= opcion <= len(tareas):
+                tareas[opcion - 1]["completa"] = True
+                print("¡Tarea marcada como completa!")
+            else:
+                print("Número de tarea inválido.")
+        except ValueError:
+            print("Ingrese un número válido.")
 
 def opcion_tres():
     limpiar_pantalla()
@@ -36,11 +59,28 @@ def opcion_tres():
 
 def opcion_cuatro():
     limpiar_pantalla()
-    print("Aqui visualizaras tus tareas.")
+    print("Tareas:")
+    if not tareas:
+        print("No hay tareas registradas.")
+    else:
+        for i, tarea in enumerate(tareas, start=1):
+            print(f"Tarea {i}:")
+            print(f"Nombre: {tarea['nombre']}")
+            print(f"Descripción: {tarea['descripcion']}")
+            print(f"Fecha límite: {tarea['fecha_limite']}")
+            print(f"Hora límite: {tarea['hora_limite']}")
+            print(f"Estado: {'completa' if tarea['completa'] else 'incompleta'}")
+            print()
 
 def opcion_cinco():
     limpiar_pantalla()
-    print("Aqui veras el estado de tus tareas.")
+    print("Estado de Tareas:")
+    if not tareas:
+        print("No hay tareas registradas.")
+    else:
+        for i, tarea in enumerate(tareas, start=1):
+            estado = "completa" if tarea["completa"] else "incompleta"
+            print(f"Tarea {i}: {tarea['nombre']} - Estado: {estado}")
 
 def opcion_seis():
     limpiar_pantalla()
@@ -65,7 +105,7 @@ opciones = {
 
 while True:
     limpiar_pantalla()
-    text = pyfiglet.print_figlet(text="task hero", colors='BLUE', font="isometric1")
+    pyfiglet.print_figlet(text="task hero", colors='BLUE', font="isometric1")
     mostrar_menu()
     numero = int(input("Ingrese una opcion: "))
     limpiar_pantalla()
