@@ -32,13 +32,13 @@ def opcion_uno():
         "completa": False  # Inicialmente la tarea está incompleta
     }
     tareas.append(tarea)
-    print("¡Tarea agregada correctamente!")
+    print("[+] ¡Tarea agregada correctamente!")
 
 def opcion_dos():
     limpiar_pantalla()
     print("Tareas:")
     if not tareas:
-        print("No hay tareas registradas.")
+        print("[!] No hay tareas registradas.")
     else:
         for i, tarea in enumerate(tareas, start=1):
             print(f"Tarea {i}: {tarea['nombre']} - Estado: {'completa' if tarea['completa'] else 'incompleta'}")
@@ -47,11 +47,11 @@ def opcion_dos():
             opcion = int(opcion)
             if 1 <= opcion <= len(tareas):
                 tareas[opcion - 1]["completa"] = True
-                print("¡Tarea marcada como completa!")
+                print("[+] ¡Tarea marcada como completa!")
             else:
-                print("Número de tarea inválido.")
+                print("[!] Número de tarea inválido.")
         except ValueError:
-            print("Ingrese un número válido.")
+            print("[+] Ingrese un número válido.")
 
 def opcion_tres():
     limpiar_pantalla()
@@ -61,7 +61,7 @@ def opcion_cuatro():
     limpiar_pantalla()
     print("Tareas:")
     if not tareas:
-        print("No hay tareas registradas.")
+        print("[!] No hay tareas registradas.")
     else:
         for i, tarea in enumerate(tareas, start=1):
             print(f"Tarea {i}:")
@@ -74,9 +74,9 @@ def opcion_cuatro():
 
 def opcion_cinco():
     limpiar_pantalla()
-    print("Estado de Tareas:")
+    print("[+] Estado de Tareas:")
     if not tareas:
-        print("No hay tareas registradas.")
+        print("[!] No hay tareas registradas.")
     else:
         for i, tarea in enumerate(tareas, start=1):
             estado = "completa" if tarea["completa"] else "incompleta"
@@ -91,7 +91,7 @@ def opcion_salir():
 
 def opcion_invalida():
     limpiar_pantalla()
-    print("Número no válido. Por favor, ingresa un número del 1 al 7.")
+    print("[!] Número no válido. Por favor, ingresa un número del 1 al 7.")
 
 opciones = {
     1: opcion_uno,
