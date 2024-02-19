@@ -4,32 +4,9 @@ import os
 import sys, signal, pyfiglet
 
 def limpiar_pantalla():
-<<<<<<< HEAD
-    os.system('cls')
-
-def mostrar_menu():
-    print("1. Agregar Tarea")
-    print("2. Marcar Tareas como Completadas")
-    print("3. Eliminar Tarea")
-    print("4. Visualizar tarea")
-    print("5. Estado de Tarea")
-    print("6. Reporte de Tarea")
-    print("7. Salir")
-
-def opcion_uno():
-    limpiar_pantalla()
-    Agregar.agregar_tarea(tareas)
-
-def opcion_dos():
-    limpiar_pantalla()
-    print("Tareas:")
-    if not tareas:
-        print("[!] No hay tareas registradas.")
-=======
     # Comando para limpiar la pantalla según el sistema operativo
     if os.name == 'posix':
         _ = os.system('clear')
->>>>>>> desarrollo
     else:
         _ = os.system('cls')
 
