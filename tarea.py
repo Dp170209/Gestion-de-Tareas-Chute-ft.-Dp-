@@ -1,5 +1,5 @@
 class Tarea:
-    def __init__(self, descripcion):
+    def __init__(self, descripcion): # :3
         self.descripcion = descripcion
         self.completada = False
 
