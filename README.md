@@ -8,6 +8,9 @@ By:
 La applicacion debe ser implementada utilizando un lenguaje de programación de su elección (por ejemplo, Python, Java o JavaScript) y debe incluir una interfaz de línea de comandos (CLI) para interectuar con ella (Menú de Opciones).
 Se debe usar Programación Orientada a Objetos o Programación Modular o ambos.
 
+## **TaskHero**
+**TaskHero es una aplicación de lista de tareas simple pero efectiva**, desarrollada en Python utilizando Programación Orientada a Objetos. Permite a los usuarios agregar nuevas tareas, marcarlas como completadas, eliminarlas y generar informes sobre el estado de las tareas. La aplicación también incluye funcionalidades de persistencia, lo que permite que las tareas se guarden en un archivo entre sesiones.
+
 ## **Planificación**
 1. Planificación y diseño (16/02/2024) -> Dp y MrBl4ck
 2. Configuración del repositorio Git (16/02/2024) -> Dp y MrBl4ck
