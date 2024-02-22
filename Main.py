@@ -12,6 +12,10 @@ def limpiar_pantalla():
 
 def main():
     lista_de_tareas = ListaDeTareas()
+    nombre_archivo = "tareas.txt"  # Nombre del archivo de almacenamiento
+
+    # Cargar tareas al inicio del programa
+    lista_de_tareas.cargar_tareas(nombre_archivo)
 
     while True:
         limpiar_pantalla()
@@ -66,8 +70,9 @@ def main():
                 pausar_pantalla()
 
         elif eleccion == "6":
-            print("[!] Saliendo...")
+            print("[!] Guardando y saliendo...")
             pausar_pantalla()
+            lista_de_tareas.guardar_tareas(nombre_archivo)
             break
 
         else:
